@@ -1,0 +1,87 @@
+
+
+.intro-pictures {
+    width: 100vw;
+    height: 1600px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-shadow {
+    position: absolute;
+    width: 690px;
+    height: 670px;
+    padding-top: 80px;
+}
+
+.intro-background {
+    position: absolute;
+    top: 150px;
+    z-index: 10;
+}
+
+.portrait_big {
+    padding-left: 100px;
+    height: 700px;
+    position: absolute;
+}
+
+.portrait_top_layer {
+    z-index: 20;
+}
+
+.introduction-container {
+    position: absolute;
+    top: 250px;
+    right: 100px;
+    z-index: 10;
+    text-align: center;
+}
+
+.introduction-text {
+    display: flex;
+}
+
+.i-am {
+    font-size: 64px;
+    rotate: 270deg;
+    margin-right: -50px;
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 74px;
+    font-weight: 700;
+    margin-bottom: -10px;
+}
+
+.developer {
+    font-size: 58px;
+    color: #9747FF;
+}
+
+.introduction-button {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.scroll-down {
+    rotate: 90deg;
+    position: absolute;
+    right: 50px;
+    top: 750px;
+    z-index: 20;
+}
+
+.intro-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    z-index: 50;
+    position: absolute;
+    top: 800px;
+    img {
+    margin-right: 20px;
+    }
+}

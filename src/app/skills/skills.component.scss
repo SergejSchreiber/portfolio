@@ -1,0 +1,39 @@
+.skill-section {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.skills-icons img {
+    margin: 0 50px 50px 0;
+}
+
+.skills-container {
+    width: 500px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 950px;
+    position: relative;
+    button {
+        margin-top: 50px;
+    }
+    img {
+        position: absolute;
+        right: -100px;
+        top: 75px;
+    }
+}
+
+.skill-title-text {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: end;
+}
+
+.skills-shadow {
+    position: absolute;
+    left: 0;
+    top: 1900px;
+    z-index: -1;
+}

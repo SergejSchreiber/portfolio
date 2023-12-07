@@ -1,0 +1,95 @@
+.portfolio-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    p {
+        margin-right: 450px;
+    }
+}
+
+.portfolio-title {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: end;
+    margin-top: 100px;
+}
+
+.portfolio-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    img {
+        height: 340px;
+    }
+
+    button {
+        background-color: #9747FF;
+    }
+
+    td {
+        width: 50%;
+        padding: 40px;
+    }
+}
+
+.app-title {
+    color: #9747FF;
+    font-size: 32px;
+    font-weight: 700;
+
+}
+
+.app-title2 {
+    color: #70E61C;
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.app-description {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 50px;
+    margin-top: 25px;
+}
+
+.no-background {
+    background-color: #141D2F !important;
+    border: 1px solid #70E61C;
+}
+
+.left-col {
+    text-align: end;
+}
+
+.left {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.right {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.right-col {
+    text-align: left;
+}
+
+.portfolio_shadow {
+    position: absolute;
+    left: 0;
+    top: 3000px;
+}

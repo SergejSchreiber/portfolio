@@ -1,0 +1,57 @@
+.footer {
+    padding: 37px 100px;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141D2F;
+    border-top: #70E61C 3px solid;
+    height: 291px;
+}
+
+.logo {
+    scale: 1.5;
+    margin-left: 27px;
+    display: flex;
+    font-size: 35px;
+    font-weight: 700;
+
+    span {
+    position: relative;
+    }
+
+    .logo-detail1 {
+        font-size: 48px;
+        font-weight: 800;
+        position: absolute;
+        padding-left: 59px;
+        margin-top: -6px;
+        color: #9747FF;
+    }
+
+    .logo-detail2 {
+        font-weight: 1000;
+        color: #70E61C;
+        position: absolute;
+        padding-left: 110px;
+        margin-top: -22px;
+    }
+}
+
+.impressum{
+    font-size: 16;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+
+    a:hover{
+        color: #70E61C;
+    }
+}
+

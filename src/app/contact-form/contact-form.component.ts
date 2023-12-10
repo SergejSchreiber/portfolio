@@ -18,16 +18,12 @@ export class ContactFormComponent {
 @ViewChild('messageField') messageField!: ElementRef;
 @ViewChild('sendButton') sendButton!: ElementRef;
 
+
   async sendMail() {
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
     this.sendMailInputFieldsDisable();
     //Animation anzeigen
     let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', emailField.value);
-    fd.append('message', messageField.value);
+    this.settingFormData(fd);
     //senden
     await fetch('https://sergej-schreiber.developerakademie.net/angular-projects/send_mail/send_mail.php', {
         method: 'POST',
@@ -35,6 +31,13 @@ export class ContactFormComponent {
       });
     //Text anzeigen: Nachricht gesendet
     this.sendMailInputFieldsAble();
+    this.resetInputs();
+  }
+  
+  settingFormData(fd: FormData){
+    fd.append('name', this.nameField.nativeElement.value);
+    fd.append('email', this.emailField.nativeElement.value);
+    fd.append('message', this.messageField.nativeElement.value);
   }
 
   sendMailInputFieldsDisable() {
@@ -57,6 +60,12 @@ export class ContactFormComponent {
     emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
+  }
+
+  resetInputs(){
+    this.nameField.nativeElement.value = '';
+    this.emailField.nativeElement.value = '';
+    this.messageField.nativeElement.value = '';
   }
 
 }

@@ -13,6 +13,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     PortfolioComponent,
     FooterComponent,
     ImpressumComponent,
-    HomepageComponent
+    HomepageComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,

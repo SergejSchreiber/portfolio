@@ -109,6 +109,13 @@ input[type="checkbox"]:checked + label::before {
     cursor: pointer;
 }
 
+.btthover {
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
+}
+
 .contact-shadow-r {
     position: absolute;
     right: 0;

@@ -22,12 +22,13 @@
     <textarea class="contact-form-input-fields" required type="text" name="message" #messageField placeholder="Your message"></textarea>
     <div>
       <input required type="checkbox" id="myCheckbox">
-      <label for="myCheckbox">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+      <label for="myCheckbox">I've read the <a (click)="scrollToTop()" routerLink="/privacy">privacy policy</a> and agree to the processing of my data as outlined.</label>
     </div>
     <div class="send-message-button">
       <button #sendButton>Send message</button>
     </div>
     <img (click)="scrollToTop()" class="back-to-top" src="../../assets/img/back-to-top.png">
+    <img (click)="scrollToTop()" class="back-to-top btthover" src="../../assets/img/back-to-top-hover.png">
   </form>
   <img class="contact-shadow-r" src="../../assets/img/contact_shadow_r.png">
   <img class="contact-shadow-l" src="../../assets/img/contact_shadow_l.png">

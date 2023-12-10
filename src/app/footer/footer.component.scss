@@ -1,57 +1,76 @@
 .footer {
-    padding: 37px 100px;
-    position: relative;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #141D2F;
-    border-top: #70E61C 3px solid;
-    height: 291px;
+  padding: 37px 100px;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141d2f;
+  border-top: #70e61c 3px solid;
+  height: 291px;
 }
 
 .logo {
-    scale: 1.5;
-    margin-left: 27px;
-    display: flex;
-    font-size: 35px;
-    font-weight: 700;
+  scale: 1.5;
+  margin-left: 27px;
+  display: flex;
+  font-size: 35px;
+  font-weight: 700;
 
-    span {
+  span {
     position: relative;
-    }
+  }
 
-    .logo-detail1 {
-        font-size: 48px;
-        font-weight: 800;
-        position: absolute;
-        padding-left: 59px;
-        margin-top: -6px;
-        color: #9747FF;
-    }
+  .logo-detail1 {
+    font-size: 48px;
+    font-weight: 800;
+    position: absolute;
+    padding-left: 59px;
+    margin-top: -6px;
+    color: #9747ff;
+  }
 
-    .logo-detail2 {
-        font-weight: 1000;
-        color: #70E61C;
-        position: absolute;
-        padding-left: 110px;
-        margin-top: -22px;
-    }
+  .logo-detail2 {
+    font-weight: 1000;
+    color: #70e61c;
+    position: absolute;
+    padding-left: 110px;
+    margin-top: -22px;
+  }
 }
 
-.impressum{
-    font-size: 16;
-    font-weight: 400;
+.impressum {
+  font-size: 16;
+  font-weight: 400;
+  position: relative;
+}
+
+.impressum:hover {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 60%;
+    border-bottom: 3px solid #70e61c;
+  }
+}
+
+.copyright {
+  font-size: 21px;
 }
 
 .menu {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 40px;
 
-    a:hover{
-        color: #70E61C;
+  a:hover {
+    color: #70e61c;
+    &:hover {
+      scale: 1.3;
     }
+  }
 }
-

@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
     background-color: #141D2F;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -12,6 +17,7 @@ a {
 
 button {
   color: white;
+  font-size: 23px;
   background-color: #70E61C;
   padding: 15px 30px;
   border-radius: 10px;

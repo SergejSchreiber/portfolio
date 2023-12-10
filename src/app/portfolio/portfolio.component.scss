@@ -28,6 +28,10 @@
 
     button {
         background-color: #9747FF;
+        &:hover {
+            background-color: #70E61C !important;
+            transition: 0.2s ease-in-out;
+        }
     }
 
     td {
@@ -92,4 +96,5 @@
     position: absolute;
     left: 0;
     top: 3000px;
+    z-index: -10;
 }

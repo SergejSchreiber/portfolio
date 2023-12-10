@@ -46,6 +46,7 @@
 
 .contact-form-input-fields {
     background-color: #141D2F;
+    color: white;
     font-family: 'Poppins';
     font-size: 16px;
     font-weight: 400;
@@ -105,6 +106,7 @@ input[type="checkbox"]:checked + label::before {
     right: 0px;
     bottom: -100px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .contact-shadow-r {

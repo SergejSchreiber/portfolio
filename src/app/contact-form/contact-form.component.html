@@ -1,4 +1,4 @@
-<div class="contact-section">
+<div id="contact-tab-stop" class="contact-section">
   <img class="contact-line" src="../../assets/img/skills_line.png"/>
   <div class="contact-container">
     <div class="contact-title-text">
@@ -21,13 +21,13 @@
     <input class="contact-form-input-fields" required type="email" name="email" #emailField placeholder="Your email"/>
     <textarea class="contact-form-input-fields" required type="text" name="message" #messageField placeholder="Your message"></textarea>
     <div>
-      <input type="checkbox" id="myCheckbox">
+      <input required type="checkbox" id="myCheckbox">
       <label for="myCheckbox">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
     </div>
     <div class="send-message-button">
       <button #sendButton>Send message</button>
     </div>
-    <img class="back-to-top" src="../../assets/img/back-to-top.png">
+    <img (click)="scrollToTop()" class="back-to-top" src="../../assets/img/back-to-top.png">
   </form>
   <img class="contact-shadow-r" src="../../assets/img/contact_shadow_r.png">
   <img class="contact-shadow-l" src="../../assets/img/contact_shadow_l.png">

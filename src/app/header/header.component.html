@@ -1,14 +1,14 @@
 <div class="header">
-    <a href="">
+    <div (click)="scrollToTop()">
         <div class="logo">
             <span>Ser gej</span>
             <span class="logo-detail1"><</span>
             <span class="logo-detail2">.</span>
         </div>
-    </a>
+    </div>
     <div class="menu">
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Portfolio</a>
+        <a href="#about-tab-stop" [ngClass]="{'reachedSection': hasReachedAbout}">About me</a>
+        <a href="#skills-tab-stop" [ngClass]="{'reachedSection': hasReachedSkills}">Skills</a>
+        <a href="#portfolio-tab-stop" [ngClass]="{'reachedSection': hasReachedPortfolio}">Portfolio</a>
     </div>
 </div>

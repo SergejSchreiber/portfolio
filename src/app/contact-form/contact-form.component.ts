@@ -6,6 +6,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
+  scrollToTop() {
+    window.scrollTo({
+      top: 0
+    });
+  }
+
 @ViewChild('myForm') myForm!: ElementRef;
 @ViewChild('nameField') nameField!: ElementRef;
 @ViewChild('emailField') emailField!: ElementRef;
@@ -23,12 +29,10 @@ export class ContactFormComponent {
     fd.append('email', emailField.value);
     fd.append('message', messageField.value);
     //senden
-    await fetch('https://LINK-ZUR-ADRESSE/send_mail/send_mail.php',
-      {
+    await fetch('https://sergej-schreiber.developerakademie.net/angular-projects/send_mail/send_mail.php', {
         method: 'POST',
         body: fd
-      }
-    );
+      });
     //Text anzeigen: Nachricht gesendet
     this.sendMailInputFieldsAble();
   }

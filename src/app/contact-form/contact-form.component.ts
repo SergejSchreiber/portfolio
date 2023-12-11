@@ -1,24 +1,34 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrl: './contact-form.component.scss',
 })
-
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
   scrollToTop() {
     window.scrollTo({
-      top: 0
+      top: 0,
     });
   }
 
-@ViewChild('myForm') myForm!: ElementRef;
-@ViewChild('nameField') nameField!: ElementRef;
-@ViewChild('emailField') emailField!: ElementRef;
-@ViewChild('messageField') messageField!: ElementRef;
-@ViewChild('sendButton') sendButton!: ElementRef;
+  isSendButtonDisabled = true;
 
+  ngOnInit() {
+    this.isSendButtonDisabled = !(document.getElementById('policyCheckbox') as HTMLInputElement)?.checked;
+
+  }
+
+  updateSendButtonState() {
+    this.isSendButtonDisabled = !(document.getElementById('policyCheckbox') as HTMLInputElement)?.checked;
+
+  }
+
+  @ViewChild('myForm') myForm!: ElementRef;
+  @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('sendButton') sendButton!: ElementRef;
 
   async sendMail() {
     this.sendMailInputFieldsDisable();
@@ -26,16 +36,19 @@ export class ContactFormComponent {
     let fd = new FormData();
     this.settingFormData(fd);
     //senden
-    await fetch('https://sergej-schreiber.developerakademie.net/angular-projects/send_mail/send_mail.php', {
+    await fetch(
+      'https://sergej-schreiber.developerakademie.net/angular-projects/send_mail/send_mail.php',
+      {
         method: 'POST',
-        body: fd
-      });
+        body: fd,
+      }
+    );
     //Text anzeigen: Nachricht gesendet
     this.sendMailInputFieldsAble();
     this.resetInputs();
   }
-  
-  settingFormData(fd: FormData){
+
+  settingFormData(fd: FormData) {
     fd.append('name', this.nameField.nativeElement.value);
     fd.append('email', this.emailField.nativeElement.value);
     fd.append('message', this.messageField.nativeElement.value);
@@ -63,7 +76,7 @@ export class ContactFormComponent {
     sendButton.disabled = false;
   }
 
-  resetInputs(){
+  resetInputs() {
     this.nameField.nativeElement.value = '';
     this.emailField.nativeElement.value = '';
     this.messageField.nativeElement.value = '';
@@ -76,7 +89,7 @@ export class ContactFormComponent {
     const errorImg = document.getElementById(errorImgId);
     const errorImgValidId = `${fieldName}-error-img-valid`;
     const errorImgValid = document.getElementById(errorImgValidId);
-  
+
     if (field.value.trim() === '') {
       if (errorNote) {
         errorNote.style.display = 'block';
@@ -93,6 +106,4 @@ export class ContactFormComponent {
       field.style.borderColor = '#70E61C';
     }
   }
-  
-
 }

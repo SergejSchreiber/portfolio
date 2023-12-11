@@ -47,7 +47,7 @@
     </div>
     <span id="privacy-error-note">Please accept the privacy policy</span>
     <div class="send-message-button">
-      <button [disabled]="isSendButtonDisabled" [ngStyle]="{'background-color': isSendButtonDisabled ? 'grey' : '#70E61C'}"  #sendButton>Send message</button>
+      <button [disabled]="isSendButtonDisabled" [ngStyle]="{'background-color': isSendButtonDisabled ? 'grey' : '', 'padding': isSendButtonDisabled ? '15px 30px' : '', 'margin-bottom': isSendButtonDisabled ? '0' : ''}"  #sendButton>Send message</button>
     </div>
     <img (click)="scrollToTop()" class="back-to-top" src="../../assets/img/back-to-top.png">
     <img (click)="scrollToTop()" class="back-to-top btthover" src="../../assets/img/back-to-top-hover.png">

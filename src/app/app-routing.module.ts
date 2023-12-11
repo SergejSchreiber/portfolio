@@ -7,7 +7,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 const routes: Routes = [
   {path: '', component: HomepageComponent},
   {path: 'privacy', component: PrivacyComponent},
-  {path: 'impressum', component: ImpressumComponent}
+  {path: 'impressum', component: ImpressumComponent},
 ];
 
 @NgModule({

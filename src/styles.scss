@@ -3,12 +3,19 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     color: white;
     background-color: #141D2F;
     scroll-behavior: smooth;
 }
+
+@media (min-width: 1451px) {
+  body {
+    max-width: 1450px;
+  }
+}
+
 
 a {
   text-decoration: none;

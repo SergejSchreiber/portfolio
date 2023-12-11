@@ -27,7 +27,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
     FooterComponent,
     ImpressumComponent,
     HomepageComponent,
-    PrivacyComponent
+    PrivacyComponent,
   ],
   imports: [
     BrowserModule,

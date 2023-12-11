@@ -7,6 +7,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: #141D2F;
+    @media (max-width: 600px) {
+        padding: 37px 25px;
+    }
 }
 
 .logo {
@@ -37,12 +40,23 @@
     }
 }
 
+
 .menu {
     display: flex;
     gap: 20px;
 
     a:hover{
         color: #70E61C;
+    }
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.menu-mobile {
+    display: none;
+    @media (max-width: 600px) {
+        display: block;
     }
 }
 

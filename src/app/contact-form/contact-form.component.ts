@@ -5,6 +5,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
+
 export class ContactFormComponent {
   scrollToTop() {
     window.scrollTo({
@@ -67,5 +68,31 @@ export class ContactFormComponent {
     this.emailField.nativeElement.value = '';
     this.messageField.nativeElement.value = '';
   }
+
+  validateField(field: HTMLInputElement | HTMLTextAreaElement, fieldName: string) {
+    const errorNoteId = `${fieldName}-error-note`;
+    const errorNote = document.getElementById(errorNoteId);
+    const errorImgId = `${fieldName}-error-img-invalid`;
+    const errorImg = document.getElementById(errorImgId);
+    const errorImgValidId = `${fieldName}-error-img-valid`;
+    const errorImgValid = document.getElementById(errorImgValidId);
+  
+    if (field.value.trim() === '') {
+      if (errorNote) {
+        errorNote.style.display = 'block';
+        errorImg.style.display = 'block';
+        errorImgValid.style.display = 'none';
+      }
+      field.style.borderColor = 'red';
+    } else {
+      if (errorNote) {
+        errorNote.style.display = 'none';
+        errorImg.style.display = 'none';
+        errorImgValid.style.display = 'block';
+      }
+      field.style.borderColor = '#70E61C';
+    }
+  }
+  
 
 }

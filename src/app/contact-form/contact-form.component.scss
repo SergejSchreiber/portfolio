@@ -29,12 +29,11 @@
 }
 
 .contact-form {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 300px 100px 100px 100px;
-    gap: 20px;
+    gap: 30px;
     a {
         color: #9747FF;
         text-decoration: underline;
@@ -42,9 +41,34 @@
     textarea {
         min-height: 270px;
     }
+    span {
+        font-weight: 300;
+        color: red;
+        display: none;
+        margin-top: -25px;
+    }
+}
+
+.input_field_invalid {
+    position: absolute;
+    right: -20px;
+    top: 15px;
+    display: none;
+}
+
+.input_field_valid {
+    position: absolute;
+    right: -20px;
+    top: 15px;
+    display: none;
 }
 
 .contact-form-input-fields {
+    position: relative;
+}
+
+.contact-form-input-fields input, textarea {
+    width: 100%;
     background-color: #141D2F;
     color: white;
     font-family: 'Poppins';
@@ -53,11 +77,9 @@
     padding: 15px 25px;
     border-radius: 10px;
     border-color: #9747FF;
-
     &::placeholder {
         color: white;
     }
-
     &:hover {
         border-color: #70E61C;
     }
@@ -92,6 +114,10 @@ input[type="checkbox"]:checked + label::before {
     color: #70E61C;
     text-align: center;
     line-height: 18px;
+}
+
+.privacy-policy-container {
+    display: flex;
 }
 
 .send-message-button {

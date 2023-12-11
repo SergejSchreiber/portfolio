@@ -17,15 +17,37 @@
   </div>
 
   <form class="contact-form" (submit)="sendMail()" ngNativeValidate #myForm>
-    <input class="contact-form-input-fields" required type="text" name="name" #nameField placeholder="Your name"/>
-    <input class="contact-form-input-fields" required type="email" name="email" #emailField placeholder="Your email"/>
-    <textarea class="contact-form-input-fields" required type="text" name="message" #messageField placeholder="Your message"></textarea>
-    <div>
+    <div class="contact-form-input-fields">
+    <input required type="text" name="name" #nameField 
+       placeholder="Your name" (blur)="validateField(nameField, 'name')"/>
+    <img id="name-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
+    <img id="name-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
+  </div>
+    <span id="name-error-note">Your name is required</span>
+
+    <div class="contact-form-input-fields">
+    <input required type="email" name="email" #emailField 
+       placeholder="Your email" (blur)="validateField(emailField, 'email')"/>
+    <img id="email-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
+    <img id="email-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
+  </div>
+    <span id="email-error-note">Your email is required</span>
+
+    <div class="contact-form-input-fields">
+    <textarea required type="text" name="message" #messageField 
+       placeholder="Your message" (blur)="validateField(messageField, 'message')"></textarea>
+    <img id="message-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
+    <img id="message-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
+  </div>
+    <span id="message-error-note">Your message is required</span>
+
+    <div class="privacy-policy-container">
       <input required type="checkbox" id="myCheckbox">
       <label for="myCheckbox">I've read the <a (click)="scrollToTop()" routerLink="/privacy">privacy policy</a> and agree to the processing of my data as outlined.</label>
     </div>
+    <span id="privacy-error-note">Please accept the privacy policy</span>
     <div class="send-message-button">
-      <button #sendButton>Send message</button>
+      <button [disabled]="true" #sendButton>Send message</button>
     </div>
     <img (click)="scrollToTop()" class="back-to-top" src="../../assets/img/back-to-top.png">
     <img (click)="scrollToTop()" class="back-to-top btthover" src="../../assets/img/back-to-top-hover.png">

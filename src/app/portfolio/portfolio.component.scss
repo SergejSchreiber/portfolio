@@ -97,4 +97,7 @@
     left: 0;
     top: 3000px;
     z-index: -10;
+    @media (min-width: 1473px) {
+        left: calc(50vw - 725px);
+    }
 }

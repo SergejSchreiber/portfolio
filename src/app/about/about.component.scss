@@ -25,6 +25,9 @@
     right: 0;
     top: 1050px;
     z-index: 20;
+    @media (min-width: 1473px) {
+        right: calc(50vw - 725px);
+    }
 }
 
 .about-portrait-img {
@@ -38,4 +41,7 @@
     top: 700px;
     right: 0;
     z-index: 15;
+    @media (min-width: 1473px) {
+        right: calc(50vw - 725px);
+    }
 }

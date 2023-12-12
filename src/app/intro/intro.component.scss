@@ -11,6 +11,7 @@
   width: 690px;
   height: 670px;
   padding-top: 80px;
+
 }
 
 .intro-background {
@@ -35,10 +36,15 @@
   right: 100px;
   z-index: 10;
   text-align: center;
+  @media (min-width: 1473px) {
+    left: 650px;
+    margin: 0 auto;
+  }
 }
 
 .introduction-text {
   display: flex;
+  justify-content: center;
 }
 
 .i-am {
@@ -73,6 +79,9 @@
   right: 50px;
   top: 750px;
   z-index: 20;
+  @media (min-width: 1473px) {
+    right: calc(50vw - 688px);
+  }
 }
 
 .intro-bottom-links {

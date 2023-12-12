@@ -55,6 +55,7 @@
 
 .menu-mobile {
     display: none;
+    cursor: pointer;
     @media (max-width: 600px) {
         display: block;
     }

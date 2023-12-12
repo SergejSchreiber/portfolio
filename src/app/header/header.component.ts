@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -29,6 +29,12 @@ export class HeaderComponent {
     }
   }
 
+  @Input() showMenu: boolean = false;
+  @Output() changeMenu = new EventEmitter<boolean>();
+
+  changeMenuFunction(){
+    this.changeMenu.emit(true);
+  }
   
 
   scrollToTop() {

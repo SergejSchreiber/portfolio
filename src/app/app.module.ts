@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
     ImpressumComponent,
     HomepageComponent,
     PrivacyComponent,
+    MenuMobileComponent,
   ],
   imports: [
     BrowserModule,

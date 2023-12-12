@@ -11,5 +11,5 @@
         <a href="#skills-tab-stop" [ngClass]="{'reachedSection': hasReachedSkills}">Skills</a>
         <a href="#portfolio-tab-stop" [ngClass]="{'reachedSection': hasReachedPortfolio}">Portfolio</a>
     </div>
-    <img class="menu-mobile" src="../../assets/img/header-burger-menu.png">
+    <img class="menu-mobile" src="../../assets/img/header-burger-menu.png" (click)="changeMenuFunction()" *ngIf="!showMenu">
 </div>

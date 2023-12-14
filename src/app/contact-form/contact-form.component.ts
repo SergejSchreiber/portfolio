@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -106,4 +107,9 @@ export class ContactFormComponent implements OnInit {
       field.style.borderColor = '#70E61C';
     }
   }
+
+  constructor(public translate: TranslateService) {
+    
+  }
+  
 }

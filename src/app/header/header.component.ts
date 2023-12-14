@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -42,4 +43,11 @@ export class HeaderComponent {
       top: 0,
     });
   }
+
+
+  constructor(public translate: TranslateService) {
+    
+  }
+
+  
 }

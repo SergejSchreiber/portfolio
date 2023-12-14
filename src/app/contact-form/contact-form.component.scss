@@ -2,12 +2,28 @@
     position: relative;
     display: flex;
     margin-bottom: 50px;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
 }
 
 .contact-line {
         position: absolute;
         left: 0px;
         top: 170px;
+        @media (max-width: 1145px) {
+            top: 160px;
+        }
+        @media (max-width: 600px) {
+            top: 80px;
+            left: -45px;
+        }
+        @media (max-width: 500px) {
+            top: 65px;
+        }
+        @media (max-width: 400px) {
+            top: 55px;
+        }
 }
 
 .contact-container {
@@ -18,7 +34,14 @@
     align-items: center;
     width: 450px;
     position: relative;
-    
+    @media (max-width: 700px) {
+        width: auto;
+        margin-right: 100px;
+    }
+    @media (max-width: 600px) {
+        width: auto;
+        margin: 25px;
+    }
 }
 
 .title2 {
@@ -37,6 +60,9 @@
     a {
         color: #9747FF;
         text-decoration: underline;
+        @media (max-width: 1000px) {
+            color: #70E61C;
+        }
     }
     textarea {
         min-height: 270px;
@@ -46,6 +72,14 @@
         color: red;
         display: none;
         margin-top: -25px;
+    }
+    @media (max-width: 1000px) {
+        margin: 100px;
+        width: auto;
+    }
+    @media (max-width: 600px) {
+        margin: 25px;
+        width: auto;
     }
 }
 
@@ -143,6 +177,10 @@ input[type="checkbox"]:checked + label::before {
     bottom: -50px;
     margin-bottom: 50px;
     cursor: pointer;
+    @media (max-width:600px) {
+        right: 25px;
+        bottom: -75px;
+    }
 }
 
 .btthover {
@@ -164,4 +202,13 @@ input[type="checkbox"]:checked + label::before {
     left: 0;
     z-index: -10;
     bottom: -300px;
+    @media (max-width:700px) {
+        left: -150px;
+    }
+    @media (max-width:600px) {
+        left: -250px;
+    }
+    @media (max-width:450px) {
+        left: -350px;
+    }
 }

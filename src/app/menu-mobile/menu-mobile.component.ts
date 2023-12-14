@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -11,5 +12,9 @@ export class MenuMobileComponent {
 
   changeMenuFunction(){
     this.changeMenu.emit(false);
+  }
+
+  constructor(public translate: TranslateService) {
+    
   }
 }

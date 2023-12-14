@@ -16,10 +16,10 @@ body {
   }
 }
 
-
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 button {
@@ -30,6 +30,7 @@ button {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  z-index: 200 !important;
 }
 
 button:hover {
@@ -45,6 +46,15 @@ button:hover {
 .title {
   font-size: 90px;
   font-weight: 700;
+  @media (max-width: 1145px) {
+    font-size: 75px;
+  }
+  @media (max-width: 500px) {
+    font-size: 55px;
+  }
+  @media (max-width: 400px) {
+    font-size: 45px;
+  }
 }
 
 ::-webkit-scrollbar {

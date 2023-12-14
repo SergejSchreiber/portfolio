@@ -15,7 +15,14 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +43,15 @@ import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+        TranslateModule.forRoot({
+          defaultLanguage: 'de',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
   ],
   providers: [],
   bootstrap: [AppComponent]

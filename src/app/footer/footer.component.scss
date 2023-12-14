@@ -10,6 +10,13 @@
   background-color: #141d2f;
   border-top: #70e61c 3px solid;
   height: 291px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media (max-width: 600px) {
+    padding: 37px 25px;
+    
+  }
 }
 
 .logo {

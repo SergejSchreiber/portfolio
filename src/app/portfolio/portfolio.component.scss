@@ -2,9 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    overflow: hidden;
     p {
         margin-right: 450px;
+        @media (max-width: 1200px) {
+            margin-right: 250px;
+        }
+        @media (max-width: 1145px) {
+            margin-right: 200px;
+        }
+        @media (max-width: 900px) {
+            margin-right: 100px;
+        }
+        @media (max-width: 750px) {
+            margin-right: 25px;
+            margin-left: 25px;
+        }
     }
+    
 }
 
 .portfolio-title {
@@ -13,6 +28,18 @@
     gap: 25px;
     justify-content: end;
     margin-top: 100px;
+    @media (max-width: 1200px) {
+        margin-right: -200px;
+    }
+    @media (max-width: 1000px) {
+        margin-top: 200px;
+    }
+    @media (max-width: 900px) {
+        margin-right: -300px;
+    }
+    @media (max-width: 750px) {
+        margin-right: -400px;
+    }
 }
 
 .portfolio-table {
@@ -24,6 +51,24 @@
     margin-right: 100px;
     img {
         height: 340px;
+        @media (max-width: 600px) {
+            height: 200px;
+        }
+    }
+    
+    @media (max-width: 1000px) {
+        margin-left: 25px;
+        margin-right: 25px;
+        tr {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        .img-right {
+            flex-direction: column-reverse;
+        }
     }
 
     button {
@@ -37,6 +82,10 @@
     td {
         width: 50%;
         padding: 40px;
+        @media (max-width: 1000px) {
+            padding: 0;
+            width: auto;
+        }
     }
 }
 
@@ -65,6 +114,10 @@
     display: flex;
     gap: 50px;
     margin-top: 25px;
+    @media (max-width: 400px) {
+        gap: 15px;
+
+    }
 }
 
 .no-background {
@@ -90,6 +143,14 @@
 
 .right-col {
     text-align: left;
+}
+
+.left-col, .left, .right, .right-col {
+@media (max-width: 1000px) {
+    text-align: center; 
+    align-items: center; 
+    justify-content: center;
+}
 }
 
 .portfolio_shadow {

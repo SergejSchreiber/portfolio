@@ -7,9 +7,13 @@
         </div>
     </a>
     <div class="menu">
-        <a href="#about-tab-stop" [ngClass]="{'reachedSection': hasReachedAbout}">About me</a>
-        <a href="#skills-tab-stop" [ngClass]="{'reachedSection': hasReachedSkills}">Skills</a>
-        <a href="#portfolio-tab-stop" [ngClass]="{'reachedSection': hasReachedPortfolio}">Portfolio</a>
+        <a href="#about-tab-stop" [ngClass]="{'reachedSection': hasReachedAbout}" translate>About me</a>
+        <a href="#skills-tab-stop" [ngClass]="{'reachedSection': hasReachedSkills}" translate>Skills</a>
+        <a href="#portfolio-tab-stop" [ngClass]="{'reachedSection': hasReachedPortfolio}" translate>Portfolio</a>
+    </div>
+    <div class="language-buttons">
+        <a (click)="translate.use('en');" >EN</a> | 
+        <a (click)="translate.use('de');" >DE</a>
     </div>
     <img class="menu-mobile" src="../../assets/img/header-burger-menu.png" (click)="changeMenuFunction()" *ngIf="!showMenu">
 </div>

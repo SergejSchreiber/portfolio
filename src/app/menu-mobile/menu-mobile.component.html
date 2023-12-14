@@ -1,9 +1,9 @@
 <div class="menu-mobile" (click)="changeMenuFunction()" [ngClass]="showAnimation ? 'fly-in' : 'fly-out'">
     <img src="assets/img/close-btn.png" class="close-btn" (click)="changeMenuFunction()">
     <div class="menu-mobile-container">
-        <a href="#about-tab-stop" (click)="changeMenuFunction()">About me</a>
-        <a href="#skills-tab-stop" (click)="changeMenuFunction()">My skills</a>
-        <a href="#portfolio-tab-stop" (click)="changeMenuFunction()">Portfolio</a>
-        <a href="#contact-tab-stop" (click)="changeMenuFunction()">Contact</a>
+        <a href="#about-tab-stop" (click)="changeMenuFunction()" translate>About me</a>
+        <a href="#skills-tab-stop" (click)="changeMenuFunction()" translate>My skills</a>
+        <a href="#portfolio-tab-stop" (click)="changeMenuFunction()" translate>Portfolio</a>
+        <a href="#contact-tab-stop" (click)="changeMenuFunction()" translate>Contact</a>
     </div>
 </div>

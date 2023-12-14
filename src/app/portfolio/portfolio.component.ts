@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  constructor(public translate: TranslateService) {
+    
+  }
 }

@@ -1,12 +1,23 @@
 .skill-section {
     margin-left: 100px;
     margin-top: 300px;
+    @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+    @media (max-width: 600px) {
+        margin-left: 25px;
+    }
 }
 
 .skills-icons {
     display: flex;
     flex-wrap: wrap;
-
+    @media (max-width: 600px) {
+        justify-content: center;
+    }
     div {
         width: 80px;
         display: flex;
@@ -14,10 +25,8 @@
         align-items: center;
         justify-content: center;
         margin: 0 50px 50px 0;
-                
         img {
             margin-bottom: 8px;
-
             &:hover {
                 transform: translateY(-15px);
                 transition: 0.1s ease-in-out;
@@ -27,18 +36,24 @@
 }
 
 .skills-container {
-    width: 1000px;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 950px;
     gap: 50px;
     position: relative;
+    @media (max-width: 1000px) {
+    }
     img {
         position: absolute;
         right: -100px;
         top: 75px;
+        @media (max-width: 1125px) {
+            top:55px;
+        }
+        @media (max-width: 1000px) {
+            right: -100px;
+        }
     }
 }
 
@@ -47,6 +62,10 @@
     flex-direction: column;
     align-items: right;
     text-align: end;
+}
+
+.title {
+    text-wrap: nowrap;
 }
 
 .skills-shadow {
@@ -61,6 +80,29 @@
 
 .get-in-touch-btn-container {
     height: 80px;
+    @media (max-width: 1000px) {
+        position: absolute;
+        top: 550px;
+    }
+
+    @media (max-width: 757px) {
+        top: 700px;
+    }
+
+    @media (max-width: 627px) {
+        top: 850px;
+    }
+
+    @media (max-width: 600px) {
+        top: 700px;
+    }
+
+    @media (max-width: 552px) {
+        top: 850px;
+    }
+    @media (max-width: 422px) {
+        top: 1050px;
+    }
 }
 
 .get-in-touch-btn {

@@ -43,7 +43,7 @@
 
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 
     a:hover{
         color: #70E61C;
@@ -73,4 +73,10 @@
     background-color: #9747FF;
     width: 30px;
     height: 3px;
-  }
+}
+
+.language-buttons {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+}

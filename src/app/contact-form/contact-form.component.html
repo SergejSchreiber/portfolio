@@ -6,12 +6,12 @@
         Contact
       </div>
 
-      <div class="title2">
+      <div class="title2" translate>
         Got a problem to solve?
       </div>
       <div>
-        <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
-        <p>Need a Frontend developer? Contact me!</p>
+        <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
+        <p translate>Need a Frontend developer? Contact me!</p>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
     <img id="name-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
     <img id="name-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
   </div>
-    <span id="name-error-note">Your name is required</span>
+    <span id="name-error-note" translate>Your name is required</span>
 
     <div class="contact-form-input-fields">
     <input required type="email" name="email" #emailField 
@@ -31,7 +31,7 @@
     <img id="email-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
     <img id="email-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
   </div>
-    <span id="email-error-note">Your email is required</span>
+    <span id="email-error-note" translate>Your email is required</span>
 
     <div class="contact-form-input-fields">
     <textarea required type="text" name="message" #messageField 
@@ -39,13 +39,13 @@
     <img id="message-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
     <img id="message-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
   </div>
-    <span id="message-error-note">Your message is required</span>
+    <span id="message-error-note" translate>Your message is required</span>
 
     <div class="privacy-policy-container">
       <input required type="checkbox" id="policyCheckbox" (change)="updateSendButtonState()">
-      <label for="policyCheckbox">I've read the <a (click)="scrollToTop()" routerLink="/privacy">privacy policy</a> and agree to the processing of my data as outlined.</label>
+      <label for="policyCheckbox" translate>I've read the <a (click)="scrollToTop()" routerLink="/privacy" translate>privacy policy</a> and agree to the processing of my data as outlined.</label>
     </div>
-    <span id="privacy-error-note">Please accept the privacy policy</span>
+    <span id="privacy-error-note" translate>Please accept the privacy policy</span>
     <div class="send-message-button">
       <button [disabled]="isSendButtonDisabled" [ngStyle]="{'background-color': isSendButtonDisabled ? 'grey' : '', 'padding': isSendButtonDisabled ? '15px 30px' : '', 'margin-bottom': isSendButtonDisabled ? '0' : ''}"  #sendButton>Send message</button>
     </div>

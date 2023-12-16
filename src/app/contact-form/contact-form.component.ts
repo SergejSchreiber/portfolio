@@ -38,7 +38,7 @@ export class ContactFormComponent implements OnInit {
     this.settingFormData(fd);
     //senden
     await fetch(
-      'https://sergej-schreiber.developerakademie.net/angular-projects/send_mail/send_mail.php',
+      'https://sergej-schreiber.developerakademie.net/angular-projects/portfolio/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,

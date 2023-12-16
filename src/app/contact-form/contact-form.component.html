@@ -1,5 +1,5 @@
 <div id="contact-tab-stop" class="contact-section">
-  <img class="contact-line" src="../../assets/img/skills_line.png"/>
+  <img class="contact-line" src="/assets/img/skills_line.png"/>
   <div class="contact-container">
     <div class="contact-title-text">
       <div class="title">
@@ -20,24 +20,24 @@
     <div class="contact-form-input-fields">
     <input required type="text" name="name" #nameField 
        placeholder="Your name" (blur)="validateField(nameField, 'name')"/>
-    <img id="name-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
-    <img id="name-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
+    <img id="name-error-img-invalid" class="input_field_invalid" src="/assets/img/input_field_invalid.png">
+    <img id="name-error-img-valid" class="input_field_valid" src="/assets/img/input_field_valid.png">
   </div>
     <span id="name-error-note" translate>Your name is required</span>
 
     <div class="contact-form-input-fields">
     <input required type="email" name="email" #emailField 
        placeholder="Your email" (blur)="validateField(emailField, 'email')"/>
-    <img id="email-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
-    <img id="email-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
+    <img id="email-error-img-invalid" class="input_field_invalid" src="/assets/img/input_field_invalid.png">
+    <img id="email-error-img-valid" class="input_field_valid" src="/assets/img/input_field_valid.png">
   </div>
     <span id="email-error-note" translate>Your email is required</span>
 
     <div class="contact-form-input-fields">
     <textarea required type="text" name="message" #messageField 
        placeholder="Your message" (blur)="validateField(messageField, 'message')"></textarea>
-    <img id="message-error-img-invalid" class="input_field_invalid" src="../../assets/img/input_field_invalid.png">
-    <img id="message-error-img-valid" class="input_field_valid" src="../../assets/img/input_field_valid.png">
+    <img id="message-error-img-invalid" class="input_field_invalid" src="/assets/img/input_field_invalid.png">
+    <img id="message-error-img-valid" class="input_field_valid" src="/assets/img/input_field_valid.png">
   </div>
     <span id="message-error-note" translate>Your message is required</span>
 
@@ -49,9 +49,9 @@
     <div class="send-message-button">
       <button [disabled]="isSendButtonDisabled" [ngStyle]="{'background-color': isSendButtonDisabled ? 'grey' : '', 'padding': isSendButtonDisabled ? '15px 30px' : '', 'margin-bottom': isSendButtonDisabled ? '0' : ''}"  #sendButton>Send message</button>
     </div>
-    <img (click)="scrollToTop()" class="back-to-top" src="../../assets/img/back-to-top.png">
-    <img (click)="scrollToTop()" class="back-to-top btthover" src="../../assets/img/back-to-top-hover.png">
+    <img (click)="scrollToTop()" class="back-to-top" src="/assets/img/back-to-top.png">
+    <img (click)="scrollToTop()" class="back-to-top btthover" src="/assets/img/back-to-top-hover.png">
   </form>
-  <img class="contact-shadow-r" src="../../assets/img/contact_shadow_r.png">
-  <img class="contact-shadow-l" src="../../assets/img/contact_shadow_l.png">
+  <img class="contact-shadow-r" src="/assets/img/contact_shadow_r.png">
+  <img class="contact-shadow-l" src="/assets/img/contact_shadow_l.png">
 </div>

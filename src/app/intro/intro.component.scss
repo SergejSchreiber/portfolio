@@ -4,6 +4,7 @@
   max-width: 100%;
   position: relative;
   overflow: hidden;
+  margin-top: 150px;
   @media(max-width: 1050px) {
     height: 1900px;
   }
@@ -17,19 +18,17 @@
     height: 1850px;
   }
   @media(max-width: 600px) {
-    margin-top: -100px;
+    margin-top: 30px;
     height: 1500px;
   }
   @media(max-width: 500px) {
-    margin-top: -175px;
+    margin-top: -75px;
     height: 1600px;
   }
   @media(max-width: 400px) {
-    margin-top: -175px;
     height: 1700px;
   }
   @media(max-width: 375px) {
-    margin-top: -175px;
     height: 1800px;
   }
 }

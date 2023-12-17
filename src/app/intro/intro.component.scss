@@ -91,6 +91,15 @@
   right: 100px;
   z-index: 10;
   text-align: center;
+  animation: slideInRight 0.5s 0.3s ease-in-out;
+  @keyframes slideInRight {
+    from {
+      right: -700px;
+    }
+    to {
+      right: 100px;
+    }
+  }
   @media (min-width: 1473px) {
     left: 650px;
     margin: 0 auto;
@@ -186,6 +195,7 @@
   margin-top: 30px;
   &:hover {
     padding: 20px 35px 20px 35px;
+    margin-top: 20px;
     transition: 0.1s ease-in-out;
   }
   @media (max-width: 500px) {

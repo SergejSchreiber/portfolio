@@ -86,18 +86,22 @@
 }
 
 .introduction-container {
+  opacity: 0;
   position: absolute;
   top: 250px;
   right: 100px;
   z-index: 10;
   text-align: center;
   animation: slideInRight 0.5s 0.3s ease-in-out;
+  opacity: 1;
   @keyframes slideInRight {
     from {
-      right: -700px;
+      opacity: 0;
+      transform: translateX(100%);
     }
     to {
-      right: 100px;
+      opacity: 1;
+      transform: translateX(0%);
     }
   }
   @media (min-width: 1473px) {

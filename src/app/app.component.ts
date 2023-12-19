@@ -13,11 +13,21 @@ export class AppComponent {
     translate.use('en');
 }
 
+  /**
+   * Property to control the visibility of the menu.
+   */
   public showMenu: boolean = false;
+
+  /**
+   * Property to control the visibility of the animation.
+   */
   public showAnimation: boolean = false;
 
+  /**
+   * Handles changes in the menu status and triggers animations accordingly.
+   * @param opened - A boolean indicating whether the menu is opened or closed.
+   */
   menuChanges(opened: boolean) {
-
     if(opened == false){
       this.showAnimation = opened;
       setTimeout(() => {
@@ -27,5 +37,6 @@ export class AppComponent {
       this.showAnimation = opened;
       this.showMenu = opened;
     }
-  } 
+  }
+
 }

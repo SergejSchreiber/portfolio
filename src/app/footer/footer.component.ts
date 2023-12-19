@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+
+  /**
+   * Scrolls to the top of the page.
+   */
   scrollToTop() {
     window.scrollTo({
       top: 0,

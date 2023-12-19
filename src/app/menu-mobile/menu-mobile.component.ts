@@ -7,14 +7,24 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './menu-mobile.component.scss'
 })
 export class MenuMobileComponent {
+
+  /**
+   * Input property to determine whether to show the animation.
+   */
   @Input() showAnimation :boolean = false;
+
+  /**
+   * Event emitter to notify the parent component about the change in the animation status.
+   */
   @Output() changeMenu = new EventEmitter<boolean>();
 
+  /**
+   * Emits an event to change the animation status.
+   */
   changeMenuFunction(){
     this.changeMenu.emit(false);
   }
 
-  constructor(public translate: TranslateService) {
-    
-  }
+  constructor(public translate: TranslateService) {}
+
 }

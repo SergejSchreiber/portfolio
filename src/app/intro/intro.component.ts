@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './intro.component.scss'
 })
 export class IntroComponent {
-  constructor(public translate: TranslateService) {
-    
-  }
+
+  constructor(public translate: TranslateService) {}
+  
 }

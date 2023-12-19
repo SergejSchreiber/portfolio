@@ -37,14 +37,13 @@ export class ContactFormComponent implements OnInit {
     let fd = new FormData();
     this.settingFormData(fd);
     await fetch(
-      'https://sn-software.eu/send_mail/send_mail.php',
+      'https://sergej-schreiber.de/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,
       }
     );
     this.hideLoadIcon();
-    //Text anzeigen: Nachricht gesendet
     this.sendMailInputFieldsAble();
     this.resetInputs();
   }

@@ -17,7 +17,6 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit() {
     this.isSendButtonDisabled = !(document.getElementById('policyCheckbox') as HTMLInputElement)?.checked;
-
   }
 
   updateSendButtonState() {
@@ -34,19 +33,31 @@ export class ContactFormComponent implements OnInit {
   async sendMail() {
     this.sendMailInputFieldsDisable();
     //Animation anzeigen
+    this.showLoadIcon();
     let fd = new FormData();
     this.settingFormData(fd);
-    //senden
     await fetch(
-      'https://sergej-schreiber.developerakademie.net/angular-projects/portfolio/send_mail/send_mail.php',
+      'https://sn-software.eu/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,
       }
     );
+    this.hideLoadIcon();
     //Text anzeigen: Nachricht gesendet
     this.sendMailInputFieldsAble();
     this.resetInputs();
+  }
+
+  showLoadIcon() {
+    document.getElementById('load-icon').style.display = 'block';
+    document.getElementById('send-message-text').style.display = 'none';
+  }
+
+  hideLoadIcon() {
+    document.getElementById('load-icon').style.display = 'none';
+    document.getElementById('send-message-text').style.display = 'block';
+    document.getElementById('send-confirmation').style.display = 'block';
   }
 
   settingFormData(fd: FormData) {

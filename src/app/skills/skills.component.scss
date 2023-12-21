@@ -55,6 +55,15 @@
         @media (max-width: 1000px) {
             right: -100px;
         }
+        @media (max-width: 500px) {
+            top: 40px;
+        }
+        @media (max-width: 400px) {
+            top: 30px;
+        }
+        @media (max-width: 340px) {
+            right: -90px;
+        }
     }
 }
 
@@ -76,6 +85,9 @@
     z-index: -1;
     @media (min-width: 1473px) {
         left: calc(50vw - 725px);
+    }
+    @media (max-width: 350px) {
+        left: -50px;
     }
 }
 
@@ -103,6 +115,7 @@
     }
     @media (max-width: 422px) {
         top: 1050px;
+
     }
 }
 

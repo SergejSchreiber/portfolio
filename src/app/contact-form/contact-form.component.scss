@@ -211,6 +211,9 @@ input[type="checkbox"]:checked + label::before {
     @media (max-width:450px) {
         left: -350px;
     }
+    @media (max-width:450px) {
+        left: -400px;
+    }
 }
 
 #load-icon {

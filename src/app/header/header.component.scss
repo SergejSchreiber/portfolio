@@ -9,6 +9,11 @@
     justify-content: space-between;
     align-items: center;
     background-color: #141D2F;
+    @media (min-width: 1440px) {
+        max-width: 1440px;
+        right: calc(50vw - 735px);
+        left: calc(50vw - 735px);
+    }
     @media (max-width: 600px) {
         padding: 37px 25px;
     }

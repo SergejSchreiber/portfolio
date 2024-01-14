@@ -20,31 +20,7 @@
 }
 
 .logo {
-    display: flex;
-    font-size: 35px;
-    font-weight: 700;
-    cursor: pointer;
-
-    span {
-    position: relative;
-    }
-
-    .logo-detail1 {
-        font-size: 48px;
-        font-weight: 800;
-        position: absolute;
-        padding-left: 59px;
-        margin-top: -6px;
-        color: #9747FF;
-    }
-
-    .logo-detail2 {
-        font-weight: 1000;
-        color: #70E61C;
-        position: absolute;
-        padding-left: 110px;
-        margin-top: -22px;
-    }
+    width: 120px;    
 }
 
 

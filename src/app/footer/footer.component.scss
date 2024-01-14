@@ -20,32 +20,7 @@
 }
 
 .logo {
-  scale: 1.5;
-  margin-left: 27px;
-  display: flex;
-  font-size: 35px;
-  font-weight: 700;
-
-  span {
-    position: relative;
-  }
-
-  .logo-detail1 {
-    font-size: 48px;
-    font-weight: 800;
-    position: absolute;
-    padding-left: 59px;
-    margin-top: -6px;
-    color: #9747ff;
-  }
-
-  .logo-detail2 {
-    font-weight: 1000;
-    color: #70e61c;
-    position: absolute;
-    padding-left: 110px;
-    margin-top: -22px;
-  }
+  width: 200px;
 }
 
 .impressum {
